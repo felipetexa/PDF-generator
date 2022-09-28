@@ -1,8 +1,12 @@
 import pdfMake from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts'
+import pdfFonts from 'pdfmake/build/vfs_fonts';
+import PieChart from '../components/PieChart';
 
 export default function clientsPDF(clients) {
   pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
+  
+  
 
   const reportTitle = [
     {
@@ -40,9 +44,9 @@ export default function clientsPDF(clients) {
         ]
       },
       layout: 'headerLineOnly',
-      // content: [
-      //   {image: }
-      // ]
+      content: [
+        {image}
+      ]
     }
   ];
 

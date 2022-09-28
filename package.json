@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@david.kucsai/react-pdf-table": "^0.4.1",
+    "@react-pdf/renderer": "^3.0.0",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
     "chart.js": "^3.9.1",

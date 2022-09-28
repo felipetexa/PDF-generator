@@ -13,15 +13,7 @@ function App() {
       label: 'Clientes por ano',
       data: [6, 7, 5, 8, 11, 9, 5],
       backgroundColor: ['brown', 'cyan']
-    }],
-    options: {  
-      maintainAspectRatio: false,
-      animation:{
-          onComplete: function(){
-              dataURL = canvar_bar.toDataURL('image/png');
-          }
-      }
-    }
+    }]
   })
 
   const [job, setJob] = useState({
@@ -36,20 +28,8 @@ function App() {
         'rgb(6, 136, 6)',
         'rgb(119, 119, 233)'
       ]
-    }],
-    options: {  
-      maintainAspectRatio: false,
-      animation:{
-          onComplete: function(){
-              let canvas = document.querySelector('canvas')
-              let dataURL = canvas.toDataURL('image/png');
-
-              console.log(dataURL)
-            }
-      }
-    }
+    }]
   })
-  
 
   return (
     <div className="App">
@@ -57,8 +37,10 @@ function App() {
       <BarChart chartData={year} />
       <PieChart chartData={job}/>
       <button onClick={(e) => clientsPDF(data)}>Gerar PDF</button>
+
     </div>
   )
+  // 
 }
 
 export default App
